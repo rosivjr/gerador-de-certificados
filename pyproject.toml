@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certificados"
+version = "1.0.0"
+description = "Gera certificados em PDF a partir de um modelo e de uma lista de participantes"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Rosival Soares" }]
+dependencies = ["pypdf>=6.21", "reportlab>=5.1"]
+
+[project.urls]
+Homepage = "https://github.com/rosivjr/gerador-de-certificados"
+Issues = "https://github.com/rosivjr/gerador-de-certificados/issues"
+Changelog = "https://github.com/rosivjr/gerador-de-certificados/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = ["pytest>=9.2", "ruff>=0.17"]
+
+[project.scripts]
+certificados = "certificados.cli:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "PTH"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,28 @@
+# Configuração de um evento. Os caminhos são relativos a este arquivo.
+
+[modelo]
+arquivo = "modelo.pdf"
+# Tamanho da fonte do texto; se não couber, ela diminui até o mínimo.
+fonte_tamanho = 19
+fonte_tamanho_minimo = 15
+# Áreas em pontos: [esquerda, topo, direita, base], medidas a partir do canto
+# superior esquerdo. Use "certificados calibrar" para encontrar os valores.
+area_texto = [70, 210, 772, 335]
+area_data = [400, 345, 772, 375]
+
+[evento]
+nome = "Semana de Tecnologia"
+local = "no auditório central"
+datas = "nos dias 15 e 16 de agosto de 2026"
+carga_horaria = "8 horas"
+cidade = "Cidade Exemplo"
+data_emissao = 2026-08-20
+
+# Um papel por tipo de certificado. *{campo}* sai em negrito.
+[papeis.participante]
+texto = "Certificamos que *{nome}* participou do evento *{evento}*, realizado {local}, {datas}, com carga horária de *{carga_horaria}*."
+
+[papeis.ministrante]
+# Campos que cada linha deste papel precisa ter preenchidos na lista.
+exige = ["tema", "carga_horaria"]
+texto = "Certificamos que *{nome}* ministrou a palestra *{tema}* no evento *{evento}*, realizado {local}, {datas}, com carga horária de *{carga_horaria}*."

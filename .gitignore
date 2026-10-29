@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+certificados_gerados/
+.idea/
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+calibracao.pdf
