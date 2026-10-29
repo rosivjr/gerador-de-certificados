@@ -72,7 +72,7 @@ def gerar_pdf(evento: Evento, certificado: Certificado, destino: Path) -> None:
     paragrafo = ajustar(
         texto, ESTILO_TEXTO, modelo.area_texto, modelo.fonte_tamanho, modelo.fonte_tamanho_minimo
     )
-    # A data fica no tamanho mínimo, menor que o parágrafo, como no certificado antigo.
+    # A data fica no tamanho mínimo, para não competir com o texto do certificado.
     data = escape(f"{evento.cidade}, {data_por_extenso(evento.data_emissao)}")
     linha_data = ajustar(
         data,

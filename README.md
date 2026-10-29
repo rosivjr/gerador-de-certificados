@@ -14,7 +14,7 @@ Gera certificados em PDF a partir de um modelo e de uma lista de participantes. 
 
 Em cursos, palestras e semanas acadêmicas, os certificados costumam ser feitos um por um: abrir o modelo, trocar o nome, conferir o texto e exportar o PDF. Com 30 participantes por evento e alguns eventos por mês, isso toma horas, e cada cópia é uma nova chance de errar um nome ou esquecer alguém.
 
-Este programa faz essa parte repetitiva. O texto é escrito e revisado uma vez só, a lista é conferida inteira antes de gerar qualquer arquivo, e cada pessoa recebe o seu PDF.
+Este programa faz essa parte repetitiva. O texto é escrito e revisado uma vez só, e cada pessoa recebe o seu PDF.
 
 ## Instalação
 
